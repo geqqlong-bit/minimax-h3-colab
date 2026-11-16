@@ -44,7 +44,7 @@ def validate_request(cfg, req, get_asset, library):
         return None
     config = cfg.get("voice_clone", {})
     if not config.get("enabled"):
-        raise ValueError("尚未安裝 IndexTTS2；請在 Colab 啟用 INSTALL_VOICE_CLONE")
+        raise ValueError("尚未安裝 IndexTTS2；請執行 Colab ②-b 下載聲音模型，再重跑 ③")
     if req.get("mode", "ref") not in ("ref", "frames", "text"):
         raise ValueError("聲音克隆只適用單支影片")
     if any(item.get("extend") for item in req.get("tray", [])):

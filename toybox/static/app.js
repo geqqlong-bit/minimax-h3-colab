@@ -713,7 +713,7 @@ async function loadConfig() {
   if (!voiceReady) $("#useVoiceClone").checked = false;
   $("#voiceFields").hidden = !$("#useVoiceClone").checked;
   $("#voiceAvailability").textContent = voiceReady ? "IndexTTS2 已啟用；上傳一段清晰的單人聲音作參考。"
-    : "尚未啟用 IndexTTS2；請在 Colab 安裝選項中開啟聲音克隆。";
+    : "尚未啟用 IndexTTS2；請執行 Colab ②-b 下載聲音模型，再重跑 ③ 並重新整理本頁。";
   $("#skill").innerHTML = `<option value="">不使用</option>` +
     state.config.skills.map(s => `<option value="${s.id}">${esc(s.title)}</option>`).join("");
   $("#aspectSeg").innerHTML = `<button data-v="auto" title="頭尾格跟著首格、延伸跟著原片；生圖跟著第一張參考圖">自動</button>` +
